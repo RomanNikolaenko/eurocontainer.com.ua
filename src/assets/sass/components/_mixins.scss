@@ -1,0 +1,70 @@
+$maxWidth: 1200;
+@mixin adaptive($pcSize, $mobSize) {
+  font-size: calc(#{$mobSize + px} + (#{$pcSize} - #{$mobSize}) * ((100vw - 320px) / (#{$maxWidth - 320})));
+  @media (min-width: #{$maxWidth + px}) {
+    font-size: #{$pcSize + px};
+  }
+}
+
+@mixin anchor($color, $hover) {
+  display: inline-block;
+  color: $color;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.3s linear;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $color;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s linear;
+  }
+  @media (min-width: 1024px) {
+    &:hover {
+      color: $hover;
+
+      &:before {
+        background-color: $hover;
+        visibility: visible;
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+@mixin btnYellow($color) {
+  text-transform: uppercase;
+  font-size: 21px;
+  padding: 10px 35px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  color: $color;
+  cursor: pointer;
+  position: relative;
+  z-index: 9;
+  overflow: hidden;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient($yellow_hover, $yellow);
+    transition: all 0.3s linear;
+    z-index: -1;
+  }
+  @media (min-width: 1024px) {
+    &:hover {
+      &:before {
+        height: 100%;
+      }
+    }
+  }
+}

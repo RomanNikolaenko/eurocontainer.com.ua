@@ -1,0 +1,100 @@
+{
+  "mssRegions": [
+    {
+      "img": "cherkas_obl",
+      "text": "Черкаська <br> область"
+    },
+    {
+      "img": "chernivci_obl",
+      "text": "Чернівецька <br> область"
+    },
+    {
+      "img": "chernygiv_obl",
+      "text": "Чернігівська <br> область"
+    },
+    {
+      "img": "dniprop_obl",
+      "text": "Дніпропетровська <br> область"
+    },
+    {
+      "img": "donetsk_obl",
+      "text": "Донецька <br> область"
+    },
+    {
+      "img": "ivano_frank_obl",
+      "text": "Івано-Франківська <br> область"
+    },
+    {
+      "img": "kharkiv_obl",
+      "text": "Харківська <br> область"
+    },
+    {
+      "img": "kherson_obl",
+      "text": "Херсонська <br> область"
+    },
+    {
+      "img": "khmelnic_obl",
+      "text": "Хмельницька <br> область"
+    },
+    {
+      "img": "kirovograd_obl",
+      "text": "Кіровоградська <br> область"
+    },
+    {
+      "img": "kyiv_obl",
+      "text": "Київська <br> область"
+    },
+    {
+      "img": "luhansk_obl",
+      "text": "Луганська <br> область"
+    },
+    {
+      "img": "lviv_obl",
+      "text": "Львівська <br> область"
+    },
+    {
+      "img": "mykolaiv_obl",
+      "text": "Миколаївська <br> область"
+    },
+    {
+      "img": "odesa_obl",
+      "text": "Одеська <br> область"
+    },
+    {
+      "img": "poltava_obl",
+      "text": "Полтавська <br> область"
+    },
+    {
+      "img": "rivne_obl",
+      "text": "Рівненська <br> область"
+    },
+    {
+      "img": "sumy_obl",
+      "text": "Сумcька <br> област"
+    },
+    {
+      "img": "ternopil_obl",
+      "text": "Тернопільська <br> область"
+    },
+    {
+      "img": "vinycya_obl",
+      "text": "Вінницька <br> область"
+    },
+    {
+      "img": "volyn_obl",
+      "text": "Волинська <br> область"
+    },
+    {
+      "img": "zakarpatska_oblOA",
+      "text": "Закарпатська <br> область"
+    },
+    {
+      "img": "zaporizhia_obl",
+      "text": "Запорізька <br> область"
+    },
+    {
+      "img": "zhitomir_obl",
+      "text": "Житомирська <br> область"
+    }
+  ]
+}

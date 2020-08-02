@@ -1,0 +1,139 @@
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden auto;
+  transition: all 0.5s ease 0s;
+  z-index: 9999999;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &.open .popup__content {
+    opacity: 1;
+    transform: perspective(600px) translate(0px, 0%) rotateX(0);
+  }
+
+  &.dubbleOpen {
+    z-index: 9999999;
+  }
+
+  &__body {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+  }
+
+  &__content {
+    color: #000;
+    width: max-content;
+    background: #fff;
+    transition: all 0.5s ease 0s;
+    opacity: 0;
+    transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+
+    &-form {
+      max-width: 500px;
+      width: 100%;
+      padding-bottom: 30px;
+    }
+
+    &-details, &-image {
+      max-width: 1200px;
+    }
+
+    &-details {
+      width: 100%;
+      padding-bottom: 30px;
+    }
+
+    &-image {
+      .popup__close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        border: 0;
+      }
+
+      img {
+        height: calc(100vh - 60px);
+        margin: 0 auto;
+        display: block;
+        object-fit: contain;
+      }
+    }
+  }
+
+  &__close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+    border-bottom: 1px solid #000;
+  }
+
+  &__svg {
+    fill: #000;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    transition: all 0.3s linear;
+
+    &:hover {
+      fill: $blue;
+    }
+  }
+
+  &__title {
+    position: relative;
+
+    span {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      @include adaptive(28, 20);
+      padding: 20px;
+      font-weight: 800;
+    }
+  }
+
+  &__main {
+    padding: 0 calc(15px + (30 - 15) * ((100vw - 320px) / (1200 - 320)));
+    @media (min-width: 1200px) {
+      padding: 0 30px;
+    }
+  }
+
+  &__form {
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input {
+      height: 30px;
+    }
+
+    input, textarea {
+      margin-bottom: 15px;
+      width: 100%;
+    }
+
+    button {
+      @include btnYellow(#fff);
+      width: max-content;
+      margin: 0 auto;
+    }
+  }
+}

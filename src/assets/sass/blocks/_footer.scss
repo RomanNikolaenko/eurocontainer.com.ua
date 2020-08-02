@@ -1,0 +1,363 @@
+.footer {
+  margin-top: calc(20px + (70 - 20) * ((100vw - 320px) / (1200 - 320)));
+  background: linear-gradient(#d5eef3, #fff 70%);
+  padding: 40px 0;
+  @media (max-width: 575px) {
+    padding: 40px 0 20px;
+  }
+  @media (min-width: 1200px) {
+    margin-top: 70px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  &__block {
+    flex: 0 0 100%;
+
+    &:nth-of-type(1) {
+      flex: 0 0 100%;
+      @media (min-width: 992px) {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        width: calc(638px + (730 - 638) * ((100vw - 992px) / (1200 - 992)));
+        max-width: 730px;
+      }
+    }
+
+    &:nth-of-type(2) {
+      @media (min-width: 768px) {
+        flex: 0 0 calc(235px + (310 - 235) * ((100vw - 768px) / (1200 - 768)));
+      }
+      @media (min-width: 1200px) {
+        flex: 0 0 310px;
+      }
+
+      & > img {
+        width: 125px;
+        height: 120px;
+        display: block;
+        margin: 0 auto;
+        @media (max-width: 991.98px) {
+          display: none;
+        }
+      }
+
+      & > p {
+        margin: 10px 0 5px;
+
+        b {
+          display: block;
+        }
+
+        a {
+          @include anchor(#000, #000);
+        }
+      }
+    }
+
+    &:nth-of-type(3) {
+      display: flex;
+      align-items: flex-end;
+
+      iframe {
+        width: 100%;
+        height: 330px;
+        border: 0;
+      }
+
+      @media (min-width: 768px) {
+        flex: 0 0 calc(100% - calc(235px + (310 - 235) * ((100vw - 768px) / (1200 - 768))));
+        padding-top: 125px;
+      }
+      @media (min-width: 992px) {
+        padding-left: calc(20px + (100 - 20) * ((100vw - 992px) / (1200 - 992)));
+      }
+      @media (min-width: 1200px) {
+        flex: 0 0 calc(100% - 310px);
+        padding-left: 100px;
+      }
+      @media (max-width: 991.98px) {
+        padding-top: 15px;
+        padding-left: 20px;
+      }
+      @media (max-width: 767.98px) {
+        padding-left: 0;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0 -10px;
+    @media (max-width: 992px) {
+      margin: 0 -10px;
+    }
+
+    li {
+      color: #259eb3;
+      text-transform: uppercase;
+      font-weight: 800;
+      margin: 0 10px 15px;
+      @media (max-width: 991.98px) {
+        font-size: 24px;
+      }
+
+      a {
+        @include anchor($blue, #000);
+
+        span {
+          text-transform: lowercase;
+        }
+
+        p {
+          display: initial;
+          margin: 0;
+          text-transform: lowercase;
+          font-size: 16px;
+          @media (min-width: 992px) {
+            font-weight: 400;
+            font-size: 13px;
+          }
+        }
+      }
+
+      &:nth-of-type(1) {
+        @media (max-width: 991.98px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__map {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__icon {
+    display: flex;
+
+    a {
+      display: block;
+      width: 45px;
+      height: 45px;
+      margin-right: 5px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .desktopViber {
+      @media (max-width: 1023.98px) {
+        display: none;
+      }
+    }
+
+    .mobileViber {
+      @media (min-width: 1024px) {
+        display: none;
+      }
+    }
+  }
+
+  &_phone {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+
+    a {
+      @include anchor(#000, #000);
+      @include adaptive(21, 28);
+      width: max-content;
+    }
+  }
+
+  &__copy {
+    padding-top: 100px;
+    position: relative;
+    @media (max-width: 767.98px) {
+      padding-top: 50px;
+    }
+    @media (max-width: 575px) {
+      font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (575 - 320)));
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: #000;
+      top: 50px;
+      @media (max-width: 767.98px) {
+        top: 25px;
+      }
+    }
+  }
+
+  &__wrap,
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__wrap {
+    @media (max-width: 991px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__wrapper {
+    @media (max-width: 991px) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+
+  &__wrapper-item {
+    display: flex;
+    @media (max-width: 991px) {
+      margin-top: 15px;
+    }
+
+    a {
+      @include anchor(#000, #000);
+      margin: 0 5px;
+
+      span {
+        background: #ccc;
+        padding: 3px;
+      }
+    }
+  }
+}
+
+.scroll-up {
+  display: none;
+  @media (min-width: 1024px) {
+    display: block;
+    position: fixed;
+    left: 50px;
+    bottom: 50px;
+    z-index: 1000;
+
+    width: 70px;
+    height: 70px;
+    color: #dcdedc;
+    cursor: pointer;
+    visibility: hidden;
+    border-radius: 50px;
+    box-shadow: inset 0 0 0 4px #dcdedc;
+    opacity: 0;
+    transition: all 0.3s linear;
+    transform: translateY(25px);
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 100%;
+      height: 100%;
+      font-size: 32px;
+      font-weight: 800;
+      transition: all 0.3s linear;
+      content: '↑'; /* = content: 'U+2191'; */
+    }
+    &:hover {
+      color: $blue;
+    }
+    &-active {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+
+      transition: .3s linear;
+    }
+    &__svg-path {
+      box-sizing: border-box;
+      fill: none;
+      stroke: $blue;
+      stroke-width: 4px;
+      transition: .2s;
+    }
+    &.end {
+      &:before {
+        color: $blue;
+      }
+    }
+  }
+}
+
+.reviews__button {
+  z-index: 999;
+  position: fixed;
+  bottom: 230px;
+  right: 3.6%;
+  width: 80px;
+  height: 80px;
+  @media (max-width: 768px) {
+    bottom: 200px;
+    width: 70px;
+    height: 70px;
+    right: 20px;
+    z-index: 1000000;
+  }
+
+  @media (max-height: 420px) {
+    bottom: 110px;
+    right: initial;
+    left: 20px;
+  }
+
+  a {
+    width: 80px;
+    height: 80px;
+    background: url("../img/reviews-ua.svg") no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    display: block;
+    @media (max-width: 768px) {
+      width: 70px;
+      height: 70px;
+    }
+  }
+}
+
+.call_Phone {
+  z-index: 999;
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  width: 70px;
+  height: 70px;
+  display: none;
+  background: url("../img/phone.svg") no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  @media (max-width: 992px) {
+    display: block;
+  }
+
+  a {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70px;
+    height: 70px;
+    opacity: 0;
+  }
+}

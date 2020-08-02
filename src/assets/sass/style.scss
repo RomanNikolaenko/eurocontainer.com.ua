@@ -1,0 +1,180 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+@import "./components/_slick";
+// @import "./components/slick-theme";
+ @import "./components/_magnific";
+@import "./components/_fonts";
+@import "./components/_colors";
+@import "./components/_mixins";
+@import "./components/_popup";
+
+@import "blocks/sliders";
+@import "blocks/offer";
+@import "blocks/delivery";
+@import "blocks/form";
+@import "blocks/footer";
+@import "blocks/header";
+@import "blocks/containers";
+@import "blocks/stats";
+
+html {
+  overflow: visible !important;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.35;
+  color: $base_color;
+  padding: 0;
+  margin: 0;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.blockImagePopup {
+  z-index: 99999999;
+}
+
+input, textarea, button {
+  font-size: 16px;
+  line-height: 1.35;
+  font-family: 'Roboto', sans-serif;
+}
+
+input {
+  padding: 0 15px;
+}
+
+input[name="username"] {
+  display: none;
+}
+
+textarea {
+  padding: 5px 15px 0;
+}
+
+.btn {
+  min-width: 200px;
+  color: #fff;
+  border: 0;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.btn__blue {
+  background: $blue;
+  margin: 25px auto 0;
+  padding: 8px 20px;
+  border-bottom: 1px solid $blue;
+  display: flex;
+  justify-content: center;
+  max-width: max-content;
+  text-decoration: none;
+
+  &:hover {
+    background: #fff;
+    color: $blue;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  color: $base_color;
+  text-align: center;
+}
+
+h1 {
+  @include adaptive(24, 17);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+h2 {
+  @include adaptive(40, 22);
+}
+
+h3 {
+  @include adaptive(36, 22);
+}
+
+h5 {
+  font-size: 20px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+  @media (max-width: 991.98px) {
+    padding: 0 15px;
+  }
+}
+
+.allTitle {
+  padding: calc(30px + (70 - 30) * ((100vw - 320px) / (1200 - 320))) 0 calc(20px + (60 - 20) * ((100vw - 320px) / (1200 - 320)));
+  @media (min-width: 1200px) {
+    padding: 80px 0 60px;
+  }
+
+  h2 {
+    color: $blue;
+  }
+}
+
+.rngst_phone_button {
+  bottom: 95px !important;
+  right: 3.6% !important;
+  margin-bottom: 0 !important;
+  margin-right: -10px !important;
+  @media (max-width: 768px) {
+      bottom: 90px !important;
+      right: 5px !important;
+      margin-right: 0 !important;
+  }
+}
+
+.transitions img {
+  opacity: 0;
+  animation: tranImg 0.6s linear forwards;
+}
+
+@keyframes tranImg {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

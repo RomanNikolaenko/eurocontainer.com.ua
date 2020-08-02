@@ -1,0 +1,33 @@
+.delivery {
+  &__title {
+    padding: 30px 15px;
+    background: #4dbed2;
+
+    h5 {
+      font-weight: 400;
+      color: #fff;
+    }
+  }
+
+  &__inner {
+    background: #81dded;
+    padding: 20px 0;
+  }
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    img {
+      display: flex;
+      flex: 0 0 20%;
+      padding: 10px 15px;
+      object-fit: contain;
+      @media (max-width: 500px) {
+        max-width: 145px;
+      }
+    }
+  }
+}

@@ -1,0 +1,143 @@
+.clients, .reviews, .regions {
+  margin-bottom: 30px;
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+
+  &__items.slick-slider {
+    padding: 0 25px;
+    @media (max-width: 1023px) {
+      padding: 0 40px;
+    }
+    @media (max-width: 575px) {
+      padding: 0 calc(40px + (150 - 40) * ((100vw - 320px) / (576 - 320)));
+    }
+  }
+
+  &__item {
+    padding: 0 25px;
+
+    img {
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    text-align: center;
+    font-weight: 800;
+    margin-top: 5px;
+  }
+}
+
+.reviews {
+  overflow: hidden;
+  @media (min-width: 1024px) and (max-width: 1199.98px) {
+    &__items {
+      max-height: calc(176px + (250 - 197) * ((100vw - 1024px) / (1200 - 1024)));
+    }
+
+    &__item {
+      max-width: calc(196px + (224 - 196) * ((100vw - 1024px) / (1200 - 1024)));
+    }
+  }
+  @media (min-width: 1200px) {
+    &__items {
+      max-height: 250px;
+    }
+
+    &__item {
+      max-width: 224px;
+    }
+  }
+  @media (min-width: 767px) and (max-width: 1023.98px) {
+    &__items {
+      max-height: calc(255px + (361 - 255) * ((100vw - 768px) / (1024 - 767)));
+    }
+
+    &__item {
+      max-width: calc(230px + (305 - 230) * ((100vw - 767px) / (1024 - 767)));
+    }
+  }
+  @media (min-width: 576px) and (max-width: 766.98px) {
+    &__items {
+      max-height: calc(311px + (415 - 311) * ((100vw - 576px) / (767 - 576)));
+    }
+
+    &__item {
+      max-width: calc(276px + (344 - 276) * ((100vw - 576px) / (767 - 576)));
+    }
+  }
+  @media (max-width: 575.98px) {
+    &__items {
+      max-height: calc(269px + (320 - 269) * ((100vw - 320px) / (576 - 320)));
+    }
+
+    &__item {
+      max-width: calc(240px + (276 - 240) * ((100vw - 320px) / (576 - 320)));
+    }
+  }
+}
+
+.clients {
+  background: linear-gradient(#d5eef3, #fff 8%);
+
+  &__item {
+    flex: 0 0 16.4%;
+  }
+
+  &__items {
+    overflow: hidden;
+    @media (max-width: 1023.98px) {
+      max-height: 205px;
+    }
+  }
+}
+
+.regions {
+  background: url("../img/mapa-ua.svg") no-repeat;
+  background-size: 100% 100%;
+  height: calc(400px + (600 - 400) * ((100vw - 320px) / (1200 - 320)));
+  max-height: 600px;
+}
+
+.slick-arrow {
+  position: absolute;
+  z-index: 99;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+
+  .arrow {
+    fill: #ccc;
+    width: 40px;
+    height: 40px;
+    transition: all 0.2s linear;
+  }
+
+  &:hover .arrow {
+    fill: $blue;
+  }
+}
+
+.prev {
+  left: 0;
+  transform: rotateY(180deg) translateY(-50%);
+  @media (max-width: 1023px) {
+    left: 15px;
+  }
+}
+
+.next {
+  right: 0;
+  transform: translateY(-50%);
+  @media (max-width: 1023px) {
+    right: 15px;
+  }
+}
