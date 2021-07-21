@@ -1,4 +1,6 @@
-.clients, .reviews, .regions {
+.clients,
+.reviews,
+.regions {
   margin-bottom: 30px;
 
   &__items {
@@ -10,9 +12,11 @@
 
   &__items.slick-slider {
     padding: 0 25px;
+
     @media (max-width: 1023px) {
       padding: 0 40px;
     }
+
     @media (max-width: 575px) {
       padding: 0 calc(40px + (150 - 40) * ((100vw - 320px) / (576 - 320)));
     }
@@ -24,6 +28,7 @@
     img {
       margin: 0 auto;
       width: 100%;
+      height: auto;
     }
   }
 
@@ -37,6 +42,14 @@
 
 .reviews {
   overflow: hidden;
+
+  &__item {
+    a {
+      display: block;
+      font-size: 0;
+    }
+  }
+
   @media (min-width: 1024px) and (max-width: 1199.98px) {
     &__items {
       max-height: calc(176px + (250 - 197) * ((100vw - 1024px) / (1200 - 1024)));
@@ -46,6 +59,7 @@
       max-width: calc(196px + (224 - 196) * ((100vw - 1024px) / (1200 - 1024)));
     }
   }
+
   @media (min-width: 1200px) {
     &__items {
       max-height: 250px;
@@ -55,6 +69,7 @@
       max-width: 224px;
     }
   }
+
   @media (min-width: 767px) and (max-width: 1023.98px) {
     &__items {
       max-height: calc(255px + (361 - 255) * ((100vw - 768px) / (1024 - 767)));
@@ -64,6 +79,7 @@
       max-width: calc(230px + (305 - 230) * ((100vw - 767px) / (1024 - 767)));
     }
   }
+
   @media (min-width: 576px) and (max-width: 766.98px) {
     &__items {
       max-height: calc(311px + (415 - 311) * ((100vw - 576px) / (767 - 576)));
@@ -73,6 +89,7 @@
       max-width: calc(276px + (344 - 276) * ((100vw - 576px) / (767 - 576)));
     }
   }
+
   @media (max-width: 575.98px) {
     &__items {
       max-height: calc(269px + (320 - 269) * ((100vw - 320px) / (576 - 320)));
@@ -93,6 +110,7 @@
 
   &__items {
     overflow: hidden;
+
     @media (max-width: 1023.98px) {
       max-height: 205px;
     }
@@ -104,6 +122,13 @@
   background-size: 100% 100%;
   height: calc(400px + (600 - 400) * ((100vw - 320px) / (1200 - 320)));
   max-height: 600px;
+
+  &__item {
+    a {
+      display: block;
+      font-size: 0;
+    }
+  }
 }
 
 .slick-arrow {
@@ -129,6 +154,7 @@
 .prev {
   left: 0;
   transform: rotateY(180deg) translateY(-50%);
+
   @media (max-width: 1023px) {
     left: 15px;
   }
@@ -137,6 +163,7 @@
 .next {
   right: 0;
   transform: translateY(-50%);
+
   @media (max-width: 1023px) {
     right: 15px;
   }
